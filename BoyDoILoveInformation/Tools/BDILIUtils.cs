@@ -48,7 +48,7 @@ public class BDILIUtils : MonoBehaviour
                 bool hasCosmetx =
                         cosmeticSet.items.Any(cosmetic => !cosmetic.isNullItem &&
                                                           !rig.concatStringOfCosmeticsAllowed.Contains(
-                                                                  cosmetic.itemName));
+                                                                  cosmetic.itemName)) && !rig.inTryOnRoom;
 
                 switch (hasCosmetx)
                 {
